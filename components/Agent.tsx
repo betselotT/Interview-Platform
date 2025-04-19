@@ -1,5 +1,8 @@
+'use client'
+
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 enum CallStatus {
@@ -9,7 +12,8 @@ enum CallStatus {
   FINISHED = "FINISHED",
 }
 
-const Agent = ({ userName }: AgentProps) => {
+const Agent = ({ userName, userId, type }: AgentProps) => {
+  const router = useRouter()
   const callStatus = CallStatus.ACTIVE;
   const isSpeaking = true;
   const messages = [
