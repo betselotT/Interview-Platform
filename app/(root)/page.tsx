@@ -62,7 +62,7 @@ const page = async () => {
 
         <div className="interviews-section">
           {hasUpcomingInterviews ? (
-            getLatestInterviews?.map((interview) => (
+            latestInterviews?.map((interview) => (
               <InterviewCard {...interview} key={interview.id} />
             ))
           ) : (
